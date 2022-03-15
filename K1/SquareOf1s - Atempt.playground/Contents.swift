@@ -21,7 +21,7 @@ func getSquareOf1s(input: Int) -> String {
         output += String(repeating: "1", count: input)
         
         if i < input-1 {
-            output += "/n"
+            output += "\n"
         }
     }
     
@@ -61,7 +61,7 @@ class TestGetSquareOf1s: XCTestCase {
 
     func testTwo() {
         let input = 2
-        let expectedResult = "11/n11"
+        let expectedResult = "11\n11"
         let actualResult = getSquareOf1s(input: input)
         XCTAssert(expectedResult == actualResult, "\nExpected to see a blank string")
     }
@@ -69,7 +69,7 @@ class TestGetSquareOf1s: XCTestCase {
 
     func testFour() {
         let input = 4
-        let expectedResult = "1111/n1111/n1111/n1111"
+        let expectedResult = "1111\n1111\n1111\n1111"
         let actualResult = getSquareOf1s(input: input)
         XCTAssert(expectedResult == actualResult, "\nExpected to see a square of 1s")
     }
